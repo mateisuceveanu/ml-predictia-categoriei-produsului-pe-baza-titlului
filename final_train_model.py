@@ -67,5 +67,6 @@ final_pipeline = Pipeline([
 print("Antrenare model cu corecții pentru Bosch/Smeg...")
 final_pipeline.fit(X, y)
 
+#Save pkl file
 joblib.dump(final_pipeline, r"C:\Task final LA\ml-predictia-categoriei-produsului-pe-baza-titlului\data\final_model_v4.pkl")
 print("Model v4 salvat!")
