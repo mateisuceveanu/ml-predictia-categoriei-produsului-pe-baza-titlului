@@ -32,5 +32,12 @@ print(df["category_label"].unique())
 df = df.dropna()
 print(df["category_label"].unique())
 
+#normalize lables
+df["category_label"] = df["category_label"].replace({
+    "cpu": "cpus",
+    "fridge": "fridges",
+    "mobile phone": "mobile phones"
+})
+
 #save cleaned datasheet
 df.to_csv(r"C:\Task final LA\ml-predictia-categoriei-produsului-pe-baza-titlului\data\IMLP4_TASK_03-products_cleaned.csv", index=False)
