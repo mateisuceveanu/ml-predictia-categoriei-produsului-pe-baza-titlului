@@ -36,3 +36,17 @@ for name, model in models.items():
     y_pred = model.predict(X_test_vec)
     print(f"\n{name} - Classification Report:")
     print(classification_report(y_test, y_pred))
+
+#Conclusion
+# În urma comparării mai multor algoritmi de clasificare (Logistic Regression, Naive Bayes, Decision Tree și Support Vector Machine), 
+# modelul Support Vector Machine (LinearSVC) a obținut cele mai bune rezultate din punct de vedere al performanței generale.
+# Acesta a înregistrat cea mai mare acuratețe (97%) și cel mai ridicat scor macro F1 (0.97), 
+# demonstrând o capacitate foarte bună de generalizare și un echilibru excelent între precision și recall pentru toate categoriile de produse.
+# Performanța ridicată este justificată și din punct de vedere teoretic: SVM este cunoscut pentru eficiența sa în probleme de clasificare text,
+# mai ales atunci când datele sunt reprezentate prin vectori TF-IDF, care generează spații de dimensiuni mari și sparse.
+
+# Comparativ cu:
+# Logistic Regression, care a avut o performanță apropiată (96%), dar ușor inferioară,
+# Naive Bayes, care a prezentat scăderi semnificative pe anumite clase,
+# Decision Tree, care a avut rezultate mai puțin stabile,
+# Support Vector Machine a oferit cel mai bun compromis între precizie, robustețe și consistență a rezultatelor.
